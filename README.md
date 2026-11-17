@@ -1,79 +1,87 @@
-# Learning Go with Advent of Code
+# Learning Go
 
 ## English
 
-This repository is my learning journal as I study Go, with the goal of becoming comfortable enough with the language to solve Advent of Code problems. It is a personal record of what I learn, what I enjoy, what I find challenging, and how my approach changes over time.
+This repository is my learning journal as I study Go. It contains my personal notes about the language, practice problems from online judges, and Advent of Code solutions.
 
 ### Repository structure
 
-I plan to keep language notes and Advent of Code work in separate areas:
-
 ```text
 learning/
-  <topic>/
-    README.md       # Notes on the topic and my experience with it
+  <topic>.md             # Notes about Go and my learning experience
+  solving/
+    <platform>/
+      <problem>/
+        main.go          # Problem solution
 
 advent-of-code/
-  2026/
+  <year>/                 # 2015 through 2026
     day-01/
-      main.go       # Solution
-      notes.md      # Reasoning, problem notes, and Go observations
+      statement.md        # Puzzle statement
+      input.txt           # Puzzle input
+      part1/
+        main.go           # Part 1 executable
+      part2/
+        main.go           # Part 2 executable
 ```
 
-Each topic under `learning/` can have its own Markdown file for notes about the parts of Go I like, dislike, or want to understand better. Each Advent of Code day can have its own directory with the solution and notes about my thought process, the puzzle, and the language.
+Files directly under `learning/` hold my notes about Go: what I like, what I dislike, concepts I want to understand, and observations from learning. The `learning/solving/` directory is for problems from platforms such as Codeforces and OmegaUp. Advent of Code work lives separately under `advent-of-code/`.
 
-This is a suggested layout; I may adjust it as the project grows.
+Each AoC day keeps its statement and input alongside independent executables for both parts. Separate directories let each part use `package main` and its own `func main` without conflicts.
 
-### Running a solution
+### Running an Advent of Code solution
 
-The exact convention is still to be decided. One straightforward option is to make each day a Go package with its own `main.go`, then run a day from the repository root with:
+Run a part from the repository root and pass its input through standard input:
 
 ```sh
-go run ./advent-of-code/2026/day-01
+go run ./advent-of-code/2026/day-01/part1 < advent-of-code/2026/day-01/input.txt
+go run ./advent-of-code/2026/day-01/part2 < advent-of-code/2026/day-01/input.txt
 ```
-
-Once the directory structure and entry points are in place, I’ll update this section with the commands that work for the project.
 
 ### Why Go?
 
-I’ve spent a long time looking for a modern alternative to C++. I considered Rust, but I prefer a language with garbage collection. Go seems like a good fit, so I’m using this project to learn it through practice.
+I have spent a long time looking for a modern alternative to C++. I considered Rust, but I prefer a language with garbage collection. Go seems like a good fit, so I am learning through practice.
 
 ---
 
 ## Español
 
-Este repositorio es mi bitácora de aprendizaje mientras estudio Go, con la meta de sentirme suficientemente cómodo con el lenguaje para resolver problemas de Advent of Code. Aquí iré registrando lo que aprendo, lo que me gusta, lo que me cuesta y cómo cambia mi forma de abordar los problemas.
+Este repositorio es mi bitácora mientras aprendo Go. Contiene mis notas personales sobre el lenguaje, ejercicios de plataformas en línea y soluciones de Advent of Code.
 
 ### Estructura del repositorio
 
-La idea es mantener las notas sobre el lenguaje y el trabajo de Advent of Code en áreas separadas:
-
 ```text
 learning/
-  <tema>/
-    README.md       # Notas sobre el tema y mi experiencia
+  <tema>.md               # Notas sobre Go y mi experiencia aprendiendo
+  solving/
+    <plataforma>/
+      <problema>/
+        main.go           # Solución del problema
 
 advent-of-code/
-  2026/
+  <año>/                   # 2015 hasta 2026
     day-01/
-      main.go       # Solución
-      notes.md      # Razonamiento, notas del problema y observaciones sobre Go
+      statement.md        # Enunciado del problema
+      input.txt           # Entrada del problema
+      part1/
+        main.go           # Ejecutable de la parte 1
+      part2/
+        main.go           # Ejecutable de la parte 2
 ```
 
-Cada tema dentro de `learning/` puede tener su propio archivo Markdown con notas sobre las partes de Go que me gustan, no me gustan o quiero entender mejor. Cada día de Advent of Code puede tener su propio directorio con la solución y notas sobre mi razonamiento, el problema y el lenguaje.
+Los archivos directamente dentro de `learning/` son para mis notas de Go: lo que me gusta, lo que no, los conceptos que quiero entender y mis observaciones mientras aprendo. `learning/solving/` es para problemas de plataformas como Codeforces y OmegaUp. Los ejercicios de Advent of Code están separados en `advent-of-code/`.
 
-Esta estructura es una propuesta; puedo ajustarla a medida que crezca el proyecto.
+Cada día de AoC reúne el enunciado y la entrada junto con ejecutables independientes para ambas partes. Al estar en directorios separados, cada parte puede usar `package main` y su propia `func main` sin conflictos.
 
-### Cómo ejecutar una solución
+### Ejecutar una solución de Advent of Code
 
-Todavía no he definido una convención. Una opción sencilla es que cada día sea un paquete de Go con su propio `main.go`; desde la raíz del repositorio se podría ejecutar así:
+Desde la raíz del repositorio, ejecuta la parte y pásale la entrada por la entrada estándar:
 
 ```sh
-go run ./advent-of-code/2026/day-01
+go run ./advent-of-code/2026/day-01/part1 < advent-of-code/2026/day-01/input.txt
+go run ./advent-of-code/2026/day-01/part2 < advent-of-code/2026/day-01/input.txt
 ```
-
-Cuando estén definidos los directorios y puntos de entrada, actualizaré esta sección con los comandos que use el proyecto.
 
 ### ¿Por qué Go?
 
-Llevo tiempo buscando una alternativa moderna a C++. Consideré Rust, pero prefiero un lenguaje con recolector de basura. Go me parece una buena opción, así que estoy aprendiendo mediante la práctica en este proyecto.
+Llevo tiempo buscando una alternativa moderna a C++. Consideré Rust, pero prefiero un lenguaje con recolector de basura. Go me parece una buena opción, así que estoy aprendiendo mediante la práctica.
